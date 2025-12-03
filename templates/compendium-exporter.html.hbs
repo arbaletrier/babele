@@ -1,0 +1,8 @@
+<div>
+  {{#unless pack}}
+    {{> (template "_choose.html.hbs")}}
+  {{/unless}}
+  {{#if pack}}
+    {{> (template "_export.html.hbs")}}
+  {{/if}}
+</div>

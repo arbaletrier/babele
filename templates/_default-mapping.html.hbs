@@ -1,0 +1,26 @@
+{{#each mapping}}
+  <div class="flexrow mapping-fields">
+    <input type="hidden" value="{{this.id}}" name="customMapping.{{../type}}.{{@index}}.id" />
+    <input type="text" value="{{this.key}}" name="customMapping.{{../type}}.{{@index}}.key" placeholder="customKey" />
+    <input type="text" value="{{this.value}}" name="customMapping.{{../type}}.{{@index}}.value"
+           placeholder="system.subData.customKey" />
+    <button type="button" data-action="removeMapping" data-type="{{../type}}" data-id="{{this.id}}"
+            class="remove-mapping">
+      <i class="fa fa-trash"></i> {{localize "BTFG.CompendiumExporter.RemoveCustomMapping"}}
+    </button>
+  </div>
+{{/each}}
+<div class="mapping-actions">
+  <button type="button" data-action="addMapping" data-type="{{type}}">
+    <i class="fa fa-add"></i> {{localize "BTFG.CompendiumExporter.AddCustomMapping"}}
+  </button>
+  <button type="button" class="small" data-action="exportMapping"
+          data-tooltip="{{localize "BTFG.CompendiumExporter.ExportCustomMapping"}}">
+    <i class="fa fa-save"></i>
+  </button>
+  <button type="button" class="small" data-import-mapping
+          data-tooltip="{{localize "BTFG.CompendiumExporter.ImportCustomMapping"}}">
+    <i class="fa fa-upload"></i>
+  </button>
+  <input id="import-custom-mapping-input" type="file" class="d-none" accept=".json" />
+</div>

@@ -1,0 +1,27 @@
+{
+  "id": "your-module-id",
+  "title": "Your module name",
+  "description": "Your module description.",
+  "authors": [
+    {
+      "name": "Your name"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13.344
+  },
+  "esmodules": [
+    "register.js"
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "babele",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  }
+}
